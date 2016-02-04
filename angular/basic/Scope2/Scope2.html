@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Scope1.css" />
+</head>
+<body>
+<div ng-controller="EventController">
+    <h1>Root Count: {{count}}</h1>
+    <div ng-controller="EventController">
+        <h2>Middel Count: {{count}}</h2>
+        <p>
+            <button ng-click="$emit('MyEvent')">$emit('MyEvent')</button>
+            <button ng-click="$broadcast('MyEvent')">$broadcast('MyEvent')</button>
+        </p>
+        <div>
+            <ul>
+                <li ng-controller="EventController" ng-repeat="item in [1,2]">
+                    <h3>Leaf Count: {{count}}</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../lib/angular-1.3.0.js"></script>
+<script src="Scope2.js"></script>
+</html>

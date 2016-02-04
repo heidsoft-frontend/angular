@@ -1,0 +1,14 @@
+{
+  "name": "contenteditable",
+  "homepage": "https://github.com/notablemind/contenteditable",
+  "_release": "73849dd789",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "73849dd789a4df036830775139e40a8daa25386b"
+  },
+  "_source": "git://github.com/notablemind/contenteditable.git",
+  "_target": "*",
+  "_originalSource": "notablemind/contenteditable",
+  "_direct": true
+}

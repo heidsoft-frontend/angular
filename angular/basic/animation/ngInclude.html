@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AnimateModule">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .slider-container{
+            position:relative;
+            background:white;
+            border:1px solid black;
+            height:40px;
+            overflow:hidden;
+        }
+        .slide-animate{
+            left: 0;
+            padding: 10px;
+            -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+            transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+        }
+        .slide-animate.ng-enter{
+            position: absolute; top: -50px;
+        }
+        .slide-animate.ng-enter-active,
+        .slide-animate.ng-leave{
+            position: absolute; top: 0;
+        }
+        .slide-animate.ng-leave-active{
+            top: 50px;
+        }
+
+    </style>
+    <script src="../lib/angular-1.3.15/angular.js"></script>
+    <script src="../lib/angular-1.3.15/angular-animate.js"></script>
+</head>
+<body>
+    <div ng-controller="AnimateCtrl">
+        <select ng-model="template" ng-options="t.name for t in templates">  <!--对于这个ngOption之后再作解释-->
+
+        </select>
+
+        url of the template: <tt>{{template.url}}</tt>
+        <hr/>
+        <div class="slider-container">
+            <div class="slide-animate" ng-include="template.url"></div>
+        </div>
+    </div>
+
+    <script>
+        var animateModule = angular.module('AnimateModule', ['ngAnimate']);
+        animateModule.controller('AnimateCtrl', ['$scope', function($scope){
+            $scope.templates =
+                    [ { name: 'template1.html', url: 'template1.html'},
+                        { name: 'template2.html', url: 'template2.html'} ];
+            $scope.template = $scope.templates[0];
+        }])
+    </script>
+</body>
+</html>

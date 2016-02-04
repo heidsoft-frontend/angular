@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="//cdn.bootcss.com/angular.js/1.3.0/angular.js"></script>
+    <script>
+        angular.module('MyApp', [])
+                .controller('MyController', function($scope){
+
+                })
+    </script>
+</head>
+<body>
+    <div ng-include="'myTemplateName.html'"  ng-controller="MyController" ng-init="name='world'">
+        Hello {{ name }}
+    </div>
+</body>
+</html>

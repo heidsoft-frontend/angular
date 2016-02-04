@@ -1,0 +1,20 @@
+<div>
+    <form id="form" ng-submit="formSubmit()">
+      <!--用户信息-->
+      <div class="row user"><input type="text" class="user-input" name="user" placeholder="请输入姓名" ng-model="vm.user.newName" /></div>
+      <div class="row phone"><input type="tel" class="phone-input" name="phone" placeholder="请输入手机号" ng-model="vm.user.newTel" /></div>
+      <div class="row code"><input type="text" class="code-input" name="code" placeholder="验证码" ng-model="vm.user.newCode" /><button type="button" id="loadCode" button-recount-directive>获取验证码</button></div>
+      <!--验证提示层-->
+      <div class="row pop-layer">请输入正确的手机号</div>
+      <!--提交提示层-->
+      <div class="row layer" id="layer"></div>
+      <button type="submit">提&nbsp;交</button>
+    </form>
+    <div class="copyright">&copy;&nbsp;2001-2015&nbsp;某某版权所有</div>
+</div>
+<ul>
+  <li>1: 获取验证码js</li>
+  <li>2: ng-submit用法</li>
+  <li>3: 表单验证</li>
+  <li>4: 链接地址的跳转</li>
+</ul>

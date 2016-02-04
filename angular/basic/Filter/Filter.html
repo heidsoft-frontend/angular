@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FilterApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../lib/angular-1.3.0.14/angular.js"></script>
+    <script src="Filter.js"></script>
+</head>
+<body ng-controller="FilterController">
+    <div>{{date}}</div>
+    <div>{{ date | date:"MM/dd/yyyy @ h:mma" }}</div>
+    <div>{{ date | date:"yyyy-MM-dd hh:mm:ss a" }}</div>
+</body>
+</html>

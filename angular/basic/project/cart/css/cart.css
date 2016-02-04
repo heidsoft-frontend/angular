@@ -1,0 +1,71 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    font: 14px 'Microsoft YaHei';
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    height: 70px;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+ul li img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin: 0 15px;
+}
+
+ul li div {
+    float: left;
+}
+
+ul li input {
+    height: 35px;
+    width: 60px;
+    margin: 10px 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+ul li .btns {
+    float: right;
+}
+
+input.add-btn {
+    width: 120px;
+    height: 45px;
+    background-color: #0094ff;
+    color: #fff;
+    border: 0;
+    font: 14px 'Microsoft YaHei';
+    cursor: pointer;
+}
+
+.total {
+    color: #666;
+}
+
+.total b {
+    color: #f00;
+    margin: 0 7px;
+}

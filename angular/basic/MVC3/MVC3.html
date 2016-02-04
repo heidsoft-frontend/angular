@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div ng-controller="commonController">
+        <div ng-controller="controller1">
+            <p>{{greeting.text}} <button ng-click="welcome1()">欢迎</button></p>
+        </div>
+        <div ng-controller="controller2">
+            <p>{{greeting.text}} <button ng-click="welcome2()">欢迎</button></p>
+            <p><button ng-click="commonWelcome()">欢迎</button></p>
+        </div>
+    </div>
+    <script src="../../lib/angular-1.3.0.js"></script>
+    <script src="MVC3.js"></script>
+</body>
+</html>

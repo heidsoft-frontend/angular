@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8"/>
+    <script src="//cdn.bootcss.com/angular.js/1.3.0/angular.js"></script>
+</head>
+<body>
+    <h1 news><span>大学宿舍奇葩规定：垃圾桶不能有垃圾</span></h1>
+    <script>
+        angular.module('myApp', [])
+                .directive('news', function(){
+                    return {
+                        restrict: 'AE',
+                        replace: true,
+                        transclude: true,
+                        controller: function($scope, $element, $transclude, $log){
+                            $transclude(function(clone){
+                                var a = angular.element('<a>');
+                                a.attr('href', clone.text());
+                                a.text(clone.text());
+                                $log.info('Created new a tag in link directive');
+                                $element.append(a);
+                            })
+                        }
+                    }
+                })
+    </script>
+
+</body>
+</html>

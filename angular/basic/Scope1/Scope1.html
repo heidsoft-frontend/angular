@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="GreetCtrl">
+    <p>Hello {{name}}</p>
+</div>
+<ul ng-controller="ListCtrl">
+    <li ng-repeat="n in names">{{n}} in {{department}}</li>
+</ul>
+<script src="../../lib/angular-1.3.0.js"></script>
+<script src="Scope1.js"></script>
+</body>
+</html>

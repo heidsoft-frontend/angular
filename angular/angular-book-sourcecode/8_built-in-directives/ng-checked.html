@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8"/>
+    <script src="//cdn.bootcss.com/angular.js/1.3.0/angular.js"></script>
+</head>
+<body ng-controller="MyCtrl">
+
+<label>someProperty = {{someProperty}}</label>
+<input type="checkbox"
+       ng-checked="someProperty"
+       ng-init="someProperty = true"
+       ng-model="someProperty">
+
+<br>
+
+<label>anotherProperty = {{anotherProperty}}</label>
+<input type="checkbox"
+       ng-checked="anotherProperty"
+       ng-init="anotherProperty = false"
+       ng-model="anotherProperty">
+<button ng-click="showProperty()">按钮</button>
+<script>
+    var myApp = angular.module('myApp', [])
+    myApp.controller('MyCtrl', function MyCtrl($scope){
+        $scope.showProperty = function(){
+            console.log($scope.someProperty);
+        }
+    })
+
+</script>
+
+</body>
+</html>
