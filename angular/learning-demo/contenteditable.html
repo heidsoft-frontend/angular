@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>angular</title>
+    <link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet"
+          href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-resource.js"></script>
+    <script src="../lib/underscore.js"></script>
+    <script>
+        angular.module('app', [])
+                .controller('ctrl', ctrl)
+                .directive('contenteditable', contenteditable);
+
+
+        function ctrl(){
+
+        }
+
+        function contenteditable(){
+            return {
+                require: '?^ngModel',
+                link: function(scope, element, attrs, ngModel){
+                    if(!ngModel){
+                        return;
+                    }
+
+                    $scope.setNone = function(){
+
+                    }
+
+                    ngModel.$render= function(){
+                        setHtml();
+                    }
+
+                    element.on('focus', function(){
+                        if(element.html() === defaultText){
+                            element.html('');
+                        }
+                    })
+                    element.on('focus keyup change', function(){
+                        //ngModel.$isEmpty(scope.userContent)
+                        //调用了$setViewValue以后 $isEmpty就不为空了,但是如果设置了ngModelOptions,则没用 ng-model-options="{debounce:1000}"
+                        ngModel.$setViewValue(element.html());
+                    })
+                    element.on('blur', function(){
+                        setHtml();
+                    })
+
+                    function setHtml(result){
+                        var defaultText = attrs.defaultText;
+                        if(result){
+                            ngModel.$setViewValue(result);
+                            element.html(result);
+                        }else if(!ngModel.$viewValue){
+                            ngModel.$setViewValue('');
+                            element.html(defaultText);
+                        }else{
+                            element.html(ngModel.$viewValue);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container" ng-controller="ctrl">
+    <div class="page-header">
+        <h1>ngModelController-
+            <small>创建一个实现了双向数据绑定的可编辑文本区域</small>
+        </h1>
+    </div>
+    <form role="form" name="myForm">
+        <div class="form-group">
+            <div contenteditable name="myWidget" ng-model="userContent" ng-model-options="{debounce:200}"
+                 class="form-control" required default-text="请输入内容"></div>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-default btn-primary" ng-click="setNone()">设置为'抱歉,我没有想输入的内容'</button>
+        </div>
+        <div class="alert alert-danger" role="alert" ng-show="myForm.myWidget.$error.required">
+            <strong>Oh!</strong> 必填!
+        </div>
+    </form>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">用户输入的内容为:</h3>
+        </div>
+        <div class="panel-body">
+            {{userContent}}
+        </div>
+    </div>
+</div>
+</body>
+</html>
