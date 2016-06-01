@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/angular-1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="testCtrl">
+    <form name="form" novalidate ng-submit="submit(form)">
+        <div>{{form}}</div>
+        <div>
+            <button ng-click="log(form);">Button</button>
+        </div>
+        <a href="" ng-click="add()">add one</a>
+        <div ng-repeat="person in persons" ng-form="subForm">
+            <input type="number" name="person" ng-model="person.name" required />
+            <span class="error" ng-show="subForm['person'].$invalid && subForm['person'].$dirty">should be number</span>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</div>
+<script>
+    var app = angular.module('app', []);
+    app.controller('testCtrl', function($scope){
+        $scope.persons = [];
+        $scope.add = function() {
+            $scope.persons.push({
+                name: ''
+            })
+        }
+        $scope.log = function(form){
+            console.log(form);
+        }
+        $scope.submit = function(form){
+            console.log(form.$valid);
+        }
+    })
+</script>
+</body>
+</html>

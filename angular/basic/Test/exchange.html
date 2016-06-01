@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doExchange(doubleArrays){
+        var len=doubleArrays.length;
+        if(len>=2){
+            var len1=doubleArrays[0].length;
+            var len2=doubleArrays[1].length;
+            var newlen=len1*len2;
+            var temp=new Array(newlen);
+            var index=0;
+            for(var i=0;i<len1;i++){
+                for(var j=0;j<len2;j++){
+                    temp[index]=doubleArrays[0][i]+doubleArrays[1][j];
+                    index++;
+                }
+            }
+            var newArray=new Array(len-1);
+            if(len>2){
+                newArray[1]=doubleArrays[2];
+            }
+            newArray[0]=temp;
+            return doExchange(newArray);
+        }
+        else{
+            return doubleArrays[0];
+        }
+    }//调用示例：
+    function test(){
+        var temparr=[
+            ['red', 'blue'],
+            ['big', 'medium', 'small'],
+            ['male', 'female']
+        ];
+        var ret = doExchange(temparr);
+        console.log(ret);
+        document.write("共有：" + ret.length + "种组合！<br/>");
+        for (var i = 0; i < ret.length; i++) {
+            document.write(ret[i]+"<br/>");
+        }
+    }
+    test();
+</script>
+</body>
+</html>

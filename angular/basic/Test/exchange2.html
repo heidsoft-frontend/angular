@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        .form-control{
+            display: inline-block; width: 500px; line-height: 24px; height: 24px;
+            border: 1px solid #fff;
+        }
+        [contenteditable]{
+             border-color: lightcoral;
+        }
+    </style>
+    <!--<script type="text/javascript" src="../../lib/angular-1.3.0.js"></script>-->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-contenteditable/angular-contenteditable.js"></script>
+    <script src="Test.js"></script>
+</head>
+<body ng-controller="TestControl">
+
+<label ng-repeat="user in users">
+    <input type="radio" name="group" ng-value="data[$index]" ng-model="checkboxs.value">
+    <input type="text" ng-model="data[$index]">
+</label>
+
+<button ng-click="getFunc()">按钮</button>
+
+{{ checkboxs }}
+<script>
+    var app = angular.module('app');
+    app.controller('TestControl', function($scope){
+        $scope.person = {
+            action: ''
+        }
+
+        $scope.checkboxs = {
+            value: ''
+        };
+
+        $scope.users = [
+            1,2,3,4
+        ]
+
+        $scope.data = [];
+
+        $scope.getFunc = function(){
+            console.log($scope.checkboxs);
+        }
+
+        var color = ['red', 'blue'],
+                size = ['big', 'medium', 'small'],
+                sex = ['male', 'female'],
+                arr = [];
+        arr[0] = color;
+        arr[1] = size;
+        arr[2] = sex;
+        var r = combin(arr);
+        for(var i in r){
+            document.write(r[i].join('-')+' ');
+            document.write('\n');
+        }
+
+        function combin(CombinList){
+            var Result = new Array();
+            var CombineCount = 1;
+            for(i in CombinList){
+                CombineCount *= CombinList[i].length;
+            }
+            var RepeatTime = CombineCount;
+            for(i in CombinList){
+                var ClassNo = i;
+                var StudentList = CombinList[i];
+                RepeatTime = RepeatTime/StudentList.length;
+                var StartPosition = 1;
+                for(j in StudentList){
+                    var TempStartPosition = StartPosition;
+                    var SpaceCount = CombineCount/StudentList.length/RepeatTime;
+                    for(var J = 1; J <= SpaceCount; J ++){
+                        for(var I = 0; I < RepeatTime; I ++){
+                            if(typeof(Result[TempStartPosition + I]) == 'undefined'){
+                                Result[TempStartPosition + I] = new Array();
+                            }
+                            Result[TempStartPosition + I][ClassNo] = StudentList[j];
+                        }
+                        TempStartPosition += RepeatTime*StudentList.length;
+                    }
+                    StartPosition += RepeatTime;
+                }
+            }
+            return Result;
+        }
+    })
+</script>
+</body>
+</html>
