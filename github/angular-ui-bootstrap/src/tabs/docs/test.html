@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ui.bootstrap.demo">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css">
+
+    <script src="//cdn.bootcss.com/angular.js/1.4.10/angular.js"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.4.10/angular-animate.js"></script>
+    <script src="//cdn.bootcss.com/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+    form.tab-form-demo .tab-pane {
+        margin: 20px 20px;
+    }
+</style>
+
+<div ng-controller="TabsDemoCtrl">
+    <!--<p>Select a tab by setting active binding to true:</p>
+    <p>
+        <button type="button" class="btn btn-default btn-sm" ng-click="active = 1">Select second tab</button>
+        <button type="button" class="btn btn-default btn-sm" ng-click="active = 2">Select third tab</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
+    </p>-->
+
+    <uib-tabset active="active">
+        <!--<uib-tab index="0" heading="Static title">Static content</uib-tab>-->
+        <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
+            <ng-include src="tab.contentUrl"></ng-include>
+        </uib-tab>
+    </uib-tabset>
+
+</div>
+
+<script>
+    angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
+    angular.module('ui.bootstrap.demo').controller('TabsDemoCtrl', function ($scope, $window) {
+        $scope.tabs = [
+            { title:'Dynamic Title 1', contentUrl:'tab1/tab1.html'},
+            { title:'Dynamic Title 2', contentUrl:'tab2/tab2.html'}
+        ];
+
+        $scope.alertMe = function() {
+            setTimeout(function() {
+                $window.alert('You\'ve selected the alert tab!');
+            });
+        };
+
+        $scope.model = {
+            name: 'Tabs'
+        };
+    });
+    angular.module('ui.bootstrap.demo').directive('uibTab', function () {
+        return {
+            restrict: 'E',
+            scope: {},
+            link: function (scope, element, attrs, tabsetController) {
+                debugger;
+            },
+            /*templateUrl: function(element, attr) {
+                return attr.contentUrl ? attr.contentUrl : '';
+            }*/
+        };
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="charts">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Tabs - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script type="text/javascript">
+        var charts = angular.module('charts', []);
+        charts.directive('easyuiTabs', function($compile){
+            return {
+                restrict: 'AE',
+                link: function(scope, elem, attrs){
+                    $(elem).tabs({
+                        border: true,
+                        onSelect: function(title){
+//                             alert(title + ' is selected');
+                        }
+                    });
+                    $(elem).tabs('add', {
+                        title: 'New Tab',
+                        content: $compile('<div><table easyui-datagrid></table></div>')(scope),
+                        closable: true,
+                        tools: [{
+                            iconCls: 'icon-mini-refresh',
+                            handler: function(){
+//                                alert('refresh');
+                            }
+                        }]
+                    })
+                }
+            }
+        });
+        charts.directive('easyuiDatagrid', function(){
+            return {
+                restrict: 'AE',
+                link: function(scope, elem, attrs){
+                    $(elem).datagrid({
+                        columns: (scope.columns||undefined),
+                        data: scope.data
+                    });
+                }
+            }
+        });
+        charts.controller('controller1', function($scope){
+            $scope.columns = [[
+                {field:'f1',title:'column1',width:200},
+                {field:'f2',title:'column2',width:200}
+            ]],
+                    $scope.data = [
+                        {f1:'data11',f2:'data12'},
+                        {f1:'data21',f2:'data22'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'},
+                        {f1:'data31',f2:'data32'}
+                    ];
+        });
+    </script>
+</head>
+<body ng-controller="controller1">
+<h2>Basic Tabs</h2>
+<div style="margin:20px 0 10px 0;"></div>
+<div easyui-tabs style="width:700px;height:250px">
+    <div title="tab1">
+        <table easyui-datagrid fit="true">
+            <thead>
+            <tr>
+                <th field="f1" width="100">title1</th>
+                <th field="f2" width="100">title2</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+</body>
+</html>
