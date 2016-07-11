@@ -1,0 +1,143 @@
+{
+  "info": {
+    "areaType": 0,
+    "baCode": "",
+    "purchaseClass": "5556058",
+    "brandCode": "TB101",
+    "name": "1111111111",
+    "summary": "22222",
+    "firstCategory": "55",
+    "secondCategory": "5556",
+    "brandsSelect": [
+      {
+        "code": "TB101",
+        "name": "耐克"
+      },
+      {
+        "code": "TB102",
+        "name": "测试品牌102"
+      }
+    ]
+  },
+  "productSpecifications": [
+    {
+      "specifications": [
+        {
+          "ppId": "20",
+          "pvId": "230",
+          "isGlobal": "1"
+        },
+        {
+          "ppId": "19",
+          "pvId": "70",
+          "isGlobal": "1"
+        }
+      ],
+      "SETTLE_AMOUNT": "100.00",
+      "HS_CODE": "100001",
+      "NET_WEIGHT": "5.00",
+      "GROSS_WEIGHT": "6.00",
+      "PR_NO": "10000123",
+      "BARCODE": "6921734976543"
+    },
+    {
+      "specifications": [
+        {
+          "ppId": "001",
+          "pvId": "0001",
+          "isGlobal": "1"
+        },
+        {
+          "ppId": "002",
+          "pvId": "黄色",
+          "isGlobal": "0"
+        }
+      ],
+      "SETTLE_AMOUNT": "100.00",
+      "HS_CODE": "100001",
+      "NET_WEIGHT": "5.00",
+      "GROSS_WEIGHT": "6.00",
+      "PR_NO": "10000123",
+      "BARCODE": "6921734976543"
+    }
+  ],
+  "properties": [
+    {
+      "ppId": 17,
+      "name": "厚度",
+      "prptype": "0",
+      "multiSelect": "0",
+      "showName": "厚度",
+      "orders": 1,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "62",
+          "name": "厚款",
+          "isGlobal": null
+        },
+        {
+          "pvId": "63",
+          "name": "薄款",
+          "isGlobal": null
+        },
+        {
+          "pvId": "64",
+          "name": "中等",
+          "isGlobal": null
+        }
+      ],
+      "isText": 0,
+      "pvIds": [
+        "63"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "ppId": 24,
+      "name": "长度",
+      "prptype": "1",
+      "multiSelect": "1",
+      "showName": "长度",
+      "orders": 1,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "92",
+          "name": "长牙",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "94",
+          "name": "长",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "98",
+          "name": "撒",
+          "isGlobal": "1"
+        }
+      ],
+      "isGlobal": 1,
+      "pvId": "1"
+    },
+    {
+      "ppId": 68,
+      "name": "腕径",
+      "prptype": "1",
+      "multiSelect": "1",
+      "showName": "腕径",
+      "orders": 2,
+      "required": "0",
+      "values": null,
+      "isGlobal": 1,
+      "pvId": "2"
+    }
+  ],
+  "pics": [
+    "/grp2/M00/00/56/CgIIYFc9unqEdD0bAAAAANnOovo998.jpg",
+    "/grp2/M00/00/B4/CgIIYVc9unqEGUr8AAAAALNlLrc391.jpg"
+  ],
+  "detailDesc": ""
+}

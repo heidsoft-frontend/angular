@@ -73,7 +73,8 @@
                     scope: {
                         callback: '&callback',
                         title: '@tabTitle',
-                        isActive: '=isActive'
+                        isActive: '=isActive',
+                        isShow: '=isShow'
                     },
                     template: '<li data-ng-click="clickedFunc()" data-ng-class="{active: isActive}">{{title}}</li>',
                     link: function (scope, element, attrs, tabsController) {

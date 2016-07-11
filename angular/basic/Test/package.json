@@ -1,0 +1,1282 @@
+{
+  "info": {
+    "areaType": 0,
+    "firstCategory": "55",
+    "secondCategory": "5556",
+    "purchaseClass": "5556063",
+    "brandsSelect": [
+      {
+        "code": "TB101",
+        "name": "耐克"
+      },
+      {
+        "code": "TB102",
+        "name": "测试品牌102"
+      }
+    ],
+    "brandCode": "TB101",
+    "name": "商品名称商品名称商品名称",
+    "summary": "商品卖点商品卖点商品卖点商品卖点"
+  },
+  "productSpecifications": [
+    {
+      "specifications": [
+        {
+          "pvId": "232",
+          "name": "黑色",
+          "isGlobal": 1,
+          "ppId": 20,
+          "isChecked": true
+        },
+        {
+          "pvId": "509",
+          "name": "60吨",
+          "isGlobal": 1,
+          "ppId": 7,
+          "isChecked": true
+        }
+      ],
+      "isCurrent": 0,
+      "settleAmount": "1",
+      "hsCode": "2",
+      "netWeight": "3",
+      "grossWeight": "4",
+      "prNo": "5",
+      "barCode": "6"
+    },
+    {
+      "specifications": [
+        {
+          "pvId": "232",
+          "name": "黑色",
+          "isGlobal": 1,
+          "ppId": 20,
+          "isChecked": true
+        },
+        {
+          "pvId": "80吨",
+          "isGlobal": 1,
+          "index": 6,
+          "ppId": 7,
+          "name": "80吨",
+          "isChecked": true
+        }
+      ],
+      "isCurrent": 1,
+      "settleAmount": "1",
+      "hsCode": "2",
+      "netWeight": "3",
+      "grossWeight": "4",
+      "prNo": "5",
+      "barCode": "6"
+    },
+    {
+      "specifications": [
+        {
+          "pvId": "热情红",
+          "isGlobal": 1,
+          "index": 24,
+          "ppId": 20,
+          "name": "热情红",
+          "isChecked": true
+        },
+        {
+          "pvId": "509",
+          "name": "60吨",
+          "isGlobal": 1,
+          "ppId": 7,
+          "isChecked": true
+        }
+      ],
+      "isCurrent": 0,
+      "settleAmount": "1",
+      "hsCode": "2",
+      "netWeight": "3",
+      "grossWeight": "4",
+      "prNo": "5",
+      "barCode": "6"
+    },
+    {
+      "specifications": [
+        {
+          "pvId": "热情红",
+          "isGlobal": 1,
+          "index": 24,
+          "ppId": 20,
+          "name": "热情红",
+          "isChecked": true
+        },
+        {
+          "pvId": "80吨",
+          "isGlobal": 1,
+          "index": 6,
+          "ppId": 7,
+          "name": "80吨",
+          "isChecked": true
+        }
+      ],
+      "isCurrent": 0,
+      "settleAmount": "1",
+      "hsCode": "2",
+      "netWeight": "3",
+      "grossWeight": "4",
+      "prNo": "5",
+      "barCode": "6"
+    }
+  ],
+  "properties": [
+    {
+      "ppId": 16,
+      "name": "款式",
+      "prptype": "0",
+      "multiSelect": "0",
+      "showName": "款式",
+      "orders": 1,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "58",
+          "name": "短袖",
+          "isGlobal": null
+        },
+        {
+          "pvId": "59",
+          "name": "长袖",
+          "isGlobal": null
+        },
+        {
+          "pvId": "60",
+          "name": "打低套装",
+          "isGlobal": null
+        },
+        {
+          "pvId": "61",
+          "name": "打底裙",
+          "isGlobal": null
+        }
+      ],
+      "isText": 0,
+      "pvIds": [
+        "58"
+      ]
+    },
+    {
+      "ppId": 17,
+      "name": "厚度",
+      "prptype": "0",
+      "multiSelect": "0",
+      "showName": "厚度",
+      "orders": 2,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "62",
+          "name": "厚款",
+          "isGlobal": null
+        },
+        {
+          "pvId": "63",
+          "name": "薄款",
+          "isGlobal": null
+        },
+        {
+          "pvId": "64",
+          "name": "中等",
+          "isGlobal": null
+        }
+      ],
+      "isText": 0,
+      "pvIds": [
+        "62"
+      ]
+    },
+    {
+      "ppId": 14,
+      "name": "产地",
+      "prptype": "0",
+      "multiSelect": "0",
+      "showName": "产地",
+      "orders": 4,
+      "required": "0",
+      "values": [
+        {
+          "pvId": "50",
+          "name": "陕西",
+          "isGlobal": null
+        },
+        {
+          "pvId": "51",
+          "name": "上海",
+          "isGlobal": null
+        },
+        {
+          "pvId": "52",
+          "name": "喆兔",
+          "isGlobal": null
+        },
+        {
+          "pvId": "53",
+          "name": "深圳",
+          "isGlobal": null
+        }
+      ],
+      "isText": 0,
+      "pvIds": [
+        "51"
+      ]
+    },
+    {
+      "ppId": 15,
+      "name": "人群",
+      "prptype": "0",
+      "multiSelect": "0",
+      "showName": "人群",
+      "orders": 5,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "54",
+          "name": "男士",
+          "isGlobal": null
+        },
+        {
+          "pvId": "55",
+          "name": "女士",
+          "isGlobal": null
+        },
+        {
+          "pvId": "56",
+          "name": "小朋友",
+          "isGlobal": null
+        },
+        {
+          "pvId": "57",
+          "name": "老人",
+          "isGlobal": null
+        }
+      ],
+      "isText": 0,
+      "pvIds": [
+        "54"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "ppId": 66,
+      "name": "款式",
+      "prptype": "1",
+      "multiSelect": "1",
+      "showName": "款式",
+      "orders": 1,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "307",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "313",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "317",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "321",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "325",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "329",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "333",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "337",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "341",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "345",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "349",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "353",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "357",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "362",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "367",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "372",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "377",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "382",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "387",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "392",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "397",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "401",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "405",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "409",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "413",
+          "name": "307",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "418",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4520",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4525",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4550",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "153441",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154133",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154137",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154141",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154145",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154149",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154153",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268009",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268013",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268289",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "270109",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "317245",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464713",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464781",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464785",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464789",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464793",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464797",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464820",
+          "name": "a",
+          "isGlobal": "1"
+        }
+      ],
+      "isGlobal": 1,
+      "pvId": "a"
+    },
+    {
+      "ppId": 65,
+      "name": "面料",
+      "prptype": "1",
+      "multiSelect": "1",
+      "showName": "面料",
+      "orders": 2,
+      "required": "0",
+      "values": [
+        {
+          "pvId": "306",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "312",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "316",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "320",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "324",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "328",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "332",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "336",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "340",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "344",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "348",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "352",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "356",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "361",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "366",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "371",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "376",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "381",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "386",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "391",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "396",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "400",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "404",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "408",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "412",
+          "name": "306",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "417",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4519",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4524",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4551",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "153442",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154134",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154138",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154142",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154146",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154150",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154154",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268010",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268014",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268290",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "270110",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "333626",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464714",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464782",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464786",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464790",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464794",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464798",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464821",
+          "name": "b",
+          "isGlobal": "1"
+        }
+      ],
+      "isGlobal": 1,
+      "pvId": "b"
+    },
+    {
+      "ppId": 67,
+      "name": "薄厚",
+      "prptype": "1",
+      "multiSelect": "1",
+      "showName": "薄厚",
+      "orders": 3,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "308",
+          "name": "b",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "314",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "318",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "322",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "326",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "330",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "334",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "338",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "342",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "346",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "350",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "354",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "358",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "363",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "368",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "373",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "378",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "383",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "388",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "393",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "398",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "402",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "406",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "410",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "414",
+          "name": "308",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "419",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4521",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4526",
+          "name": "2",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4552",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "153443",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154135",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154139",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154143",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154147",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154151",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154155",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268011",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268015",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268291",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "270111",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "333627",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464715",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464783",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464787",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464791",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464795",
+          "name": "c",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464799",
+          "name": "3",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464822",
+          "name": "c",
+          "isGlobal": "1"
+        }
+      ],
+      "isGlobal": 1,
+      "pvId": "c"
+    },
+    {
+      "ppId": 64,
+      "name": "是否五指袜",
+      "prptype": "1",
+      "multiSelect": "1",
+      "showName": "是否五指袜",
+      "orders": 4,
+      "required": "1",
+      "values": [
+        {
+          "pvId": "309",
+          "name": "a",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "315",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "319",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "323",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "327",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "331",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "335",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "339",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "343",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "347",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "351",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "355",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "359",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "364",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "369",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "374",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "379",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "384",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "389",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "394",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "399",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "403",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "407",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "411",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "415",
+          "name": "309",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "420",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4522",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4527",
+          "name": "1",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "4553",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "153444",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154136",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154140",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154144",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154148",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154152",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "154156",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268012",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268016",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "268292",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "270112",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "333628",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464716",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464784",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464788",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464792",
+          "name": "d",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464796",
+          "name": "蛋",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464800",
+          "name": "4",
+          "isGlobal": "1"
+        },
+        {
+          "pvId": "464823",
+          "name": "d",
+          "isGlobal": "1"
+        }
+      ],
+      "isGlobal": 1,
+      "pvId": "d"
+    }
+  ],
+  "pics": [
+    "/grp2/M00/00/5A/CgIIYFdIcYqEYVb9AAAAAIJrrCo459.jpg"
+  ],
+  "detailDesc": ""
+}
