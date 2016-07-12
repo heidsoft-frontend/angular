@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ui.bootstrap.demo">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css">
+
+    <script src="angular.js"></script>
+    <script src="angular-animate.js"></script>
+    <script src="ui-bootstrap-tpls.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+    form.tab-form-demo .tab-pane {
+        margin: 20px 20px;
+    }
+</style>
+
+<div ng-controller="TabsDemoCtrl">
+    <p>Select a tab by setting active binding to true:</p>
+    <p>
+        <button type="button" class="btn btn-default btn-sm" ng-click="active = 1">Select second tab</button>
+        <button type="button" class="btn btn-default btn-sm" ng-click="active = 2">Select third tab</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable /
+            Disable third tab
+        </button>
+    </p>
+    <hr/>
+
+    <uib-tabset active="active">
+        <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled">
+            {{tab.content}}
+        </uib-tab>
+    </uib-tabset>
+
+</div>
+
+<script>
+    angular.module('ui.bootstrap.demo', ['ngAnimate', 'ui.bootstrap']);
+    angular.module('ui.bootstrap.demo').controller('TabsDemoCtrl', function ($scope, $window) {
+        $scope.tabs = [
+            {title: 'Dynamic Title 1', content: 'Dynamic content 1'},
+            {title: 'Dynamic Title 2', content: 'Dynamic content 2', disabled: true}
+        ];
+
+        $scope.alertMe = function () {
+            setTimeout(function () {
+                $window.alert('You\'ve selected the alert tab!');
+            });
+        };
+
+        $scope.model = {
+            name: 'Tabs'
+        };
+    });
+</script>
+</body>
+</html>

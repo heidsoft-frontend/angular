@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tabsDemo">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css">
+
+    <script src="angular.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <script src="angular-animate.js"></script>
+    <script src="ui-bootstrap-tpls.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+    form.tab-form-demo .tab-pane {
+        margin: 20px 20px;
+    }
+    .main-wrap{
+        overflow: hidden;
+    }
+    .left-nav{
+        float: left;
+        width: 200px;
+    }
+    .content-wrap{
+        margin-left: 200px;
+    }
+    .left-nav li{
+        line-height: 34px;
+    }
+</style>
+
+<div class="main-wrap" ng-controller="tabsController">
+    <div class="left-nav">
+        <ul>
+            <li data-ng-repeat="item in leftNav track by item.title">
+                <a href="###" ng-click="addTab(item)">{{ item.title }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content-wrap">
+        <div>{{ active }}</div>
+
+        <uib-tabset active="active">
+            <uib-tab
+                    ng-repeat="tab in tabs track by tab.route">
+                <uib-tab-heading>
+                    {{tab.title}} <a ng-click="close($index)">x</a> {{ tab.active }}
+                </uib-tab-heading>
+                <div ui-view="{{tab.route}}"></div> {{$index}}
+            </uib-tab>
+        </uib-tabset>
+
+        <button ng-click="getCurrentState()">current state</button>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    var app = angular.module('tabsDemo', ['ui.router', 'ui.bootstrap'])
+
+    app.config([
+        '$stateProvider',
+        '$urlRouterProvider',
+        function ($stateProvider, $urlRouterProvider) {
+            var tabOpt = {
+                "main.tab1": {
+                    templateUrl: "tab1/tab1.html",
+                    controller: 'tab1Controller'
+                },
+                "main.tab2": {
+                    templateUrl: "tab2/tab2.html",
+                    controller: 'tab2Controller'
+                },
+                "main.tab3": {
+                    templateUrl: "tab3/tab3.html"
+                }
+            }
+
+            $stateProvider.state('main', {
+                url: '/main',
+                views: tabOpt
+            });
+
+            $stateProvider.state('main.subTab2', {
+                url: '/subTab2',
+                views: {
+                    "": {
+                        templateUrl: "tab2/subTab2/subTab2.html"
+                    }
+                }
+            });
+
+            $urlRouterProvider.otherwise('main');
+        }]);
+
+    app.controller("tabsController", function ($rootScope, $scope, $state, $timeout) {
+
+        $scope.tabs = [];
+
+        $scope.leftNav = [
+            { title: "My Tab 1", route: "main.tab1"},
+            { title: "My Tab 2", route: "main.tab2"},
+            { title: "My Tab 3", route: "main.tab3"}
+        ]
+
+        $scope.close = function(index){
+            console.log(index);
+        }
+
+        $scope.addTab = function(opt){
+            var isExist = false,
+                    index;
+            angular.forEach($scope.tabs, function(o, i) {
+                if(o.title === opt.title){
+                    isExist = true;
+                    index = i;
+                    return false;
+                }
+            });
+            if(!isExist){
+                $scope.tabs.push(opt);
+                index = $scope.tabs.length - 1;
+            }
+
+            $timeout(function(){
+                console.log(index);
+                $scope.active = index;
+            })
+        }
+
+        $scope.close = function(index){
+            $scope.tabs.splice(index, 1);
+        }
+
+         $scope.go = function (route) {
+            $state.go(route);
+         };
+
+         $scope.active = function (route) {
+            return $state.is(route);
+         };
+
+    });
+</script>
+
+<script src="tab1/tab1.controller.js"></script>
+<script src="tab2/tab2.controller.js"></script>
+</body>
+</html>
