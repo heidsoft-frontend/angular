@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routedTabs">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link data-require="bootstrap-css@3.0.3" data-semver="3.0.3" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <script data-require="angular.js@*" data-semver="1.2.16" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script data-require="angular-ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.js"></script>
+</head>
+<body class="container">
+
+<div ui-view></div>
+
+
+<script>
+    (function(){
+
+        var app = angular.module("routedTabs", ["ui.router", "ui.bootstrap"]);
+
+        app.config(function($stateProvider, $urlRouterProvider){
+
+            $urlRouterProvider.otherwise("/main/tab1");
+
+            $stateProvider
+                    .state("main", { abtract: true, url:"/main", templateUrl:"main.html" })
+                    .state("main.tab1", { url: "/tab1", templateUrl: "tab1.html" })
+                    .state("main.tab2", { url: "/tab2", templateUrl: "tab2.html" })
+                    .state("main.tab3", { url: "/tab3", templateUrl: "tab3.html" });
+
+        });
+
+        app.controller("mainController", function($rootScope, $scope, $state) {
+
+            $scope.go = function(route){
+                $state.go(route);
+            };
+
+            $scope.active = function(route){
+                return $state.is(route);
+            };
+
+            $scope.tabs = [
+                { heading: "Tab 1", route:"main.tab1", active:false },
+                { heading: "Tab 2", route:"main.tab2", active:false },
+                { heading: "Tab 3", route:"main.tab3", active:false },
+            ];
+
+            $scope.$on("$stateChangeSuccess", function() {
+                $scope.tabs.forEach(function(tab) {
+                    tab.active = $scope.active(tab.route);
+                });
+            });
+        });
+
+    }());
+
+</script>
+</body>
+</html>
