@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scrolling-tabs.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="scrolling-tabs-header">Angular Bootstrap Scrolling Tabs</div>
+<div ng-app="myapp">
+    <div class="scrolling-tabs-container" ng-controller="MainController as main">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li ng-class="{ 'active': tab.active, 'disabled': tab.disabled }" ng-repeat="tab in main.uc1Tabs">
+                <a ng-href="{{'#' + tab.paneId}}" role="tab" data-toggle="tab" ng-bind-html="tab.title | trustHtml"></a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane" ng-class="{ 'active': tab.active }" id="{{tab.paneId}}"
+                 ng-repeat="tab in main.uc1Tabs" ng-bind-html="tab.content | trustHtml"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="angular.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<script src="scrolling-tabs.js"></script>
+
+<script src="app.js"></script>
+<script src="MainService.js"></script>
+<script src="MainController.js"></script>
+</body>
+
+</html>
